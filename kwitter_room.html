@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's chat Room</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+	  
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyBn8GPc-OWTDxkbGOCCzq0CsXgOPgiTzpc",
+		  authDomain: "kwitter-ae5b1.firebaseapp.com",
+		  databaseURL: "https://kwitter-ae5b1-default-rtdb.firebaseio.com",
+		  projectId: "kwitter-ae5b1",
+		  storageBucket: "kwitter-ae5b1.appspot.com",
+		  messagingSenderId: "888094457570",
+		  appId: "1:888094457570:web:3583e604c1b42c719aa8bb",
+		  measurementId: "G-K7TJ8RSC82"
+		};
+	  
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		
+	  </script>
+<div class="container">
+<button id="logout" oncklick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+	<center>
+		<h1 class="header">	
+			Let's chat	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+		<h3 id="user_name" class="color_white"></h3>
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
+    <input type="text" id="room_name" class="form-control" placeholder="#Room Name">
+		</div>
+		<button onclick="addRoom();"class="btn btn-success">#Add Room</button>
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+		<div id="output"></div>
+	
+	</center>
+</div>
+<script src="kwitter_room.js"></script>
+</body>
+</html>
